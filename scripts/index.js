@@ -14,17 +14,17 @@ function createCard(item) {
 }
 
 function addCard(item) {
-  const cardElement = createCard(item, { delCard });
+  const cardElement = createCard(item);
   cardContainer.append(cardElement);
 }
 
-function add() {
+function addCards() {
   initialCards.forEach(addCard);
 }
 
 function delCard(event) {
-  const delIcon = event.target.closest(".card");
-  delIcon.remove();
+  const delCardElement = event.target.closest(".card");
+  delCardElement.remove();
 }
 
-add();
+addCards();
